@@ -25,6 +25,6 @@ package() {
 	cd "${srcdir}/applebloom-${pkgver}"
 	make PREFIX="${_prefix}" PKGNAME="${pkgname}" DESTDIR="${pkgdir}" install
 	_dir="${pkgdir}${_prefix}/share/licenses/${pkgname}"
-	ln -sf "/usr/share/licenses/common/AGPL3" "${_dir}/LICENSE"
+	ln -sf -- "/usr/share/licenses/common/AGPL3" "${_dir}/LICENSE"
 }
 

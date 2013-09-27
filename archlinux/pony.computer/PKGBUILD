@@ -25,7 +25,7 @@ package() {
 	cd "${srcdir}/pony.computer-${pkgver}"
 	make PREFIX="${_prefix}" PKGNAME="${pkgname}" DESTDIR="${pkgdir}" install
 	_dir="${pkgdir}${_prefix}/share/licenses/${pkgname}"
-	mkdir -p "${_dir}"
-	ln -s "/usr/share/licenses/common/GPL3" "${_dir}/LICENSE"
+	mkdir -p -- "${_dir}"
+	ln -sf -- "/usr/share/licenses/common/GPL3" "${_dir}/LICENSE"
 }
 
