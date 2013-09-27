@@ -1,0 +1,32 @@
+Arch Linux ports, should work fine
+all Pacman systems that is not all
+too different from Arch Linux.
+
+
+Excluded packages:
+
+netcfg:
+    Adopted from Arch Linux and is developed
+    for both Arch Linux and GNU/Pony. The
+    PKGBUILD is found in out git repository
+    for netcfg.
+
+filesystem (add extensions):
+    Conflicts with and serves the same purpose
+    as core/filesystem on Arch Linux, which is
+    a part of the operating system.
+
+licenses:
+    Conflicts with and serves the same purpose
+    as core/licenses on Arch Linux, which is
+    an expected part of a system.
+
+spike:
+    Serves the same purpose as pacman and ABS,
+    but does not work interchangeably, using
+    Spike, or any other package management
+    system then Pacman, on Arch Linux, or
+    any other than the official package
+    management system for any distribution,
+    is strongly discouraged.
+
