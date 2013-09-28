@@ -35,5 +35,5 @@ Other notes:
 
 Scripts in miscellaneous has not yet been included.
 
-The PKGBUILD for pony-initialisation has not been tested.
+pony-initialisation requires to install many rc scripts by hand, or from another source.
 
