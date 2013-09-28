@@ -7,7 +7,8 @@ pkgdesc="System bootup scripts for sysvinit"
 url="https://github.com/GNU-Pony/pony-initialisation"
 arch=(any)
 license=(GPL3)
-depends=(glibc bash coreutils systemd iproute2 ncurses kbd findutils)
+backup=(etc/inittab etc/rc.conf etc/rc.local etc/rc.local.shutdown)
+depends=(glibc bash coreutils iproute2 ncurses kbd findutils)
 makedepends=("dhcpcd: DHCP network configuration"
 	     "bridge-utils: Network bridging support"
 	     "net-tools: Network support"
@@ -29,7 +30,7 @@ build() {
 
 package() {
 	cd "${srcdir}/pony-initialisation-${pkgver}"
-	make DESTDIR="${pkgdir}" PREFIX= LIBEXEC=/lib DATA=/usr/share install
+	make DESTDIR="${pkgdir}" PREFIX= LIBEXEC=/lib DATA=/usr/share install install_systemdcompatlayer install_all_daemons
 	_dir="${pkgdir}/usr/share/licenses/${pkgname}"
 	ln -sf -- "/usr/share/licenses/common/GPL3" "${_dir}/LICENSE"
 }
