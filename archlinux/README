@@ -5,6 +5,15 @@ too different from Arch Linux.
 
 Excluded packages:
 
+celestia:
+dragonfire:
+starswirl:
+    This toolchain is specifically made for
+    the Spike scroll repositories. If you
+    plan to maintain scrolls for another
+    distribution you can use spikeless to
+    install the packages.
+
 netcfg:
     Adopted from Arch Linux and is developed
     for both Arch Linux and GNU/Pony. The
