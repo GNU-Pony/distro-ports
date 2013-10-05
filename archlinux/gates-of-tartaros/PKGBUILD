@@ -3,7 +3,7 @@
 # If want to minimise the memory usage exchange bash for dash
 
 pkgname=gates-of-tartaros
-pkgver=1380630025
+pkgver=1381012138
 pkgrel=1
 pkgdesc="Extensible minimal replacement for agetty with SSH support"
 url="https://github.com/GNU-Pony/gates-of-tartaros"
@@ -14,7 +14,7 @@ optdepends=(openssh)
 makedepends=(make sed coreutils texinfo gzip)
 install=gates-of-tartaros.install
 source=("${url}/archive/${pkgver}.tar.gz")
-sha256sums=(ab8ae79ff8e5a47ce91873e5415a3cd86b6750b58a2a043eac4a5e7953291a0a)
+sha256sums=(a57aefee68357bec3f68379c2c8ac959a681fc5dc33261eaa9472cb4ca223297)
 
 
 build() {
