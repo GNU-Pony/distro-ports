@@ -1,3 +1,5 @@
 This a collection of ports from Spike scrolls
 for GNU/Pony software to other distributions.
 
+The main reason for this ports is to provide
+package wait GNU/Pony is not stable.
