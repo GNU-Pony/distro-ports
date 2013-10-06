@@ -31,6 +31,7 @@ licenses:
     an expected part of a system.
 
 spike:
+spike-ckeccak:
     Serves the same purpose as pacman and ABS,
     but does not work interchangeably, using
     Spike, or any other package management
