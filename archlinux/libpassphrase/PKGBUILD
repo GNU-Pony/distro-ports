@@ -3,7 +3,7 @@
 pkgname=libpassphrase
 pkgver=1385512181
 pkgrel=1
-pkgdesc="Personalisable library for TTY passphrase reading'"
+pkgdesc="Personalisable library for TTY passphrase reading"
 url="https://github.com/GNU-Pony/libpassphrase"
 arch=(i686 x86_64)
 license=(GPL3)
