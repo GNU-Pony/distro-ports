@@ -4,7 +4,7 @@
 
 pkgname=gates-of-tartaros
 pkgver=1381013432
-pkgrel=1
+pkgrel=2
 pkgdesc="Extensible minimal replacement for agetty with SSH support"
 url="https://github.com/GNU-Pony/gates-of-tartaros"
 arch=(any)
@@ -26,6 +26,6 @@ package() {
 	cd "${srcdir}/gates-of-tartaros-${pkgver}"
 	make PKGNAME="${pkgname}" SBIN=/bin PREFIX=/usr DESTDIR="${pkgdir}" install
 	_dir="${pkgdir}/usr/share/licenses/${pkgname}"
-	ln -sf -- "/usr/share/licenses/common/AGPL3" "${_dir}/LICENSE"
+	ln -sf -- "/usr/share/licenses/common/GPL3" "${_dir}/LICENSE"
 }
 

@@ -42,6 +42,6 @@ package() {
 	make PKGNAME="${pkgname}" INSTALL_BIN=/bin DESTDIR="${pkgdir}" install
 	
 	_dir="${pkgdir}/usr/share/licenses/${pkgname}"
-	ln -sf -- "/usr/share/licenses/common/AGPL3" "${_dir}/LICENSE"
+	ln -sf -- "/usr/share/licenses/common/GPL3" "${_dir}/LICENSE"
 }
 
