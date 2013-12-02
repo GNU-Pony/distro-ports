@@ -1,7 +1,7 @@
 # Maintainer: Mattias Andrée <`base64 -d`(bWFhbmRyZWUK)@member.fsf.org>
 
 pkgname=bash.d
-pkgver=1385976984
+pkgver=1385977442
 pkgrel=1
 pkgdesc="Subscripts for GNU Bash shells"
 url="https://github.com/GNU-Pony/bash.d"
@@ -14,14 +14,14 @@ optdepends=("libnotify: for alert.bash"
 	    "acpi: for battery status in prompt.bash")
 makedepends=(make findutils grep coreutils)
 source=("${url}/archive/${pkgver}.tar.gz")
-sha256sums=(3f4d47b16532fec618eb6433e5958b38087cad90fcdc5e09e3f5de9a977046e1)
+sha256sums=(79e104dffaa7cc8ed7723a3b515544f86089c6436187b3b9a9574b61a8614981)
 
 _prefix=/usr
 
 
 package() {
 	cd "${srcdir}/bash.d-${pkgver}"
-	make PREFIX=/usr PKGNAME=bash.d DESTDIR="${pkgver}" install
+	make PREFIX=/usr PKGNAME=bash.d DESTDIR="${pkgdir}" install
 	_dir="${pkgdir}/usr/share/licenses/${pkgname}"
 	ln -sf -- "/usr/share/licenses/common/GPL3" "${_dir}/LICENSE"
 }
