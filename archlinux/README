@@ -21,6 +21,7 @@ netcfg:
     for netcfg.
 
 filesystem (add extensions):
+system-configurations:
     Conflicts with and serves the same purpose
     as core/filesystem on Arch Linux, which is
     a part of the operating system.
