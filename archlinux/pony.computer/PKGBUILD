@@ -1,7 +1,7 @@
 # Maintainer: Mattias Andrée <`base64 -d`(bWFhbmRyZWUK)@member.fsf.org>
 
 pkgname=pony.computer
-pkgver=1396832181
+pkgver=1396836473
 pkgrel=1
 pkgdesc="Show computer information and a pony"
 url="https://github.com/GNU-Pony/pony.computer"
@@ -11,16 +11,17 @@ depends=(sh ponysay coreutils python3)
 optdepends=("linux: Additional system information can be provided with Linux kernel's procfs /proc"
             "filesystem: Identification of distribution"
             "lsb-release: Identification of distribution")
-makedepends=(make coreutils sed)
+makedepends=(make coreutils sed texinfo)
+install=pony.computer.install
 source=("${url}/archive/${pkgver}.tar.gz")
-sha256sums=(14d4e92d02adaadd9639105f95c2c26a3f7fc5a0c8daa1e46606c97d1046b781)
+sha256sums=(ef354195a8590fc19b67e73fd9ad9505152f73bf79034ad0c1de1c041c3ccd88)
 
 _prefix=/usr
 
 
 build() {
 	cd "${srcdir}/pony.computer-${pkgver}"
-	make PREFIX="${_prefix}" PKGNAME="${pkgname}" DISTRO="Arch Linux" pony.computer
+	make PREFIX="${_prefix}" PKGNAME="${pkgname}" DISTRO="Arch Linux"
 }
 
 package() {
