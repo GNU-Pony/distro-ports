@@ -8,8 +8,8 @@ url="https://github.com/GNU-Pony/pony.computer"
 arch=(any)
 license=(GPL3)
 depends=(sh ponysay coreutils python3)
-optdepends=("linux: Additional system information can be provided with Linux kernel's procfs /proc",
-            "filesystem: Identification of distribution",
+optdepends=("linux: Additional system information can be provided with Linux kernel's procfs /proc"
+            "filesystem: Identification of distribution"
             "lsb-release: Identification of distribution")
 makedepends=(make coreutils sed)
 source=("${url}/archive/${pkgver}.tar.gz")
