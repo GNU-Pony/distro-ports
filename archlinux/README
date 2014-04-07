@@ -1,6 +1,6 @@
 Arch Linux ports, should work fine
-all Pacman systems that is not all
-too different from Arch Linux.
+pn all Pacman systems that is not
+all too different from Arch Linux.
 
 
 Excluded packages:
@@ -40,6 +40,10 @@ spike-ckeccak:
     any other than the official package
     management system for any distribution,
     is strongly discouraged.
+
+unicorn:
+    Useless on Arch Linux because of its
+    merged filesystem.
 
 
 Other notes:
