@@ -5,6 +5,12 @@ all too different from Arch Linux.
 
 Excluded packages:
 
+alternatives:
+    Conflicts with the way Arch Linux
+    does alternatives, which is that a
+    pre-selected package owns the logical
+    command.
+
 celestia:
 dragonfire:
 starswirl:
@@ -20,7 +26,7 @@ netcfg:
     PKGBUILD is found in out git repository
     for netcfg.
 
-filesystem (add extensions):
+filesystem (and extensions):
 system-configurations:
     Conflicts with and serves the same purpose
     as core/filesystem on Arch Linux, which is
