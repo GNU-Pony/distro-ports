@@ -33,19 +33,19 @@ prepare() {
 	done
 	cpp_flags="EXTRA_CPP_FLAGS=${cpp_flags[*]}"
 	
-	conf+=( AUTH="${auth}" PATH="${path_user}" PATH_ROOT="${path_root}" "${cpp_flags}" )
+	_conf+=( AUTH="${auth}" PATH="${path_user}" PATH_ROOT="${path_root}" "${cpp_flags}" )
 }
 
 build() {
 	cd "${srcdir}/cerberus-${pkgver}"
 	
-	make PKGNAME="${pkgname}" INSTALL_BIN=/bin "${conf[@]}"
+	make PKGNAME="${pkgname}" INSTALL_BIN=/bin "${_conf[@]}"
 }
 
 package() {
 	cd "${srcdir}/cerberus-${pkgver}"
 	
-	make PKGNAME="${pkgname}" INSTALL_BIN=/bin DESTDIR="${pkgdir}" "${conf[@]}" install
+	make PKGNAME="${pkgname}" INSTALL_BIN=/bin DESTDIR="${pkgdir}" "${_conf[@]}" install
 	
 	_dir="${pkgdir}/usr/share/licenses/${pkgname}"
 	ln -sf -- "/usr/share/licenses/common/GPL3" "${_dir}/LICENSE"
