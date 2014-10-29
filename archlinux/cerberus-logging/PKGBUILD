@@ -3,7 +3,7 @@
 pkgname=cerberus-logging
 pkgver=1414623324
 pkgrel=1
-pkgdesc="A compile-time configurable minimal login program that uses libpassphrase"
+pkgdesc="Log-in logging extension for cerberus"
 url="https://github.com/GNU-Pony/cerberus-logging"
 arch=(i686 x86_64)
 license=(GPL3)
