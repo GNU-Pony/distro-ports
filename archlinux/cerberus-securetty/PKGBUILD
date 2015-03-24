@@ -1,0 +1,30 @@
+# Maintainer: Mattias Andrée <`base64 -d`(bWFhbmRyZWUK)@member.fsf.org>
+
+pkgname=cerberus-securetty
+pkgver=1427201094
+pkgrel=1
+pkgdesc="securetty support for cerberus"
+url="https://github.com/GNU-Pony/cerberus-securetty"
+arch=(i686 x86_64)
+license=(GPL3)
+depends=(grep coreutils sh)
+makedepends=(make coreutils texinfo)
+install=cerberus-securetty.install
+source=("${url}/archive/${pkgver}.tar.gz")
+sha256sums=(94d07a8031f818c335f3d1f0c9cb042f166fd859099475b632cdba7df4d5683c)
+
+build() {
+	cd "${srcdir}/cerberus-securetty-${pkgver}"
+	
+	make PKGNAME="${pkgname}"
+}
+
+package() {
+	cd "${srcdir}/cerberus-securetty-${pkgver}"
+	
+	make PKGNAME="${pkgname}" DESTDIR="${pkgdir}" install
+	
+	_dir="${pkgdir}/usr/share/licenses/${pkgname}"
+	ln -sf -- "/usr/share/licenses/common/GPL3" "${_dir}/LICENSE"
+}
+
