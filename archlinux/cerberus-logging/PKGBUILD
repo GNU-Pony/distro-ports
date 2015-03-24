@@ -1,7 +1,7 @@
 # Maintainer: Mattias Andrée <`base64 -d`(bWFhbmRyZWUK)@member.fsf.org>
 
 pkgname=cerberus-logging
-pkgver=1415917759
+pkgver=1427197617
 pkgrel=1
 pkgdesc="Log-in logging extension for cerberus"
 url="https://github.com/GNU-Pony/cerberus-logging"
@@ -12,7 +12,7 @@ optdepends=('audit: for logging with audit')
 makedepends=(make coreutils gcc glibc audit)
 install=cerberus-logging.install
 source=("${url}/archive/${pkgver}.tar.gz")
-sha256sums=(99b2b35f40ff9d69e9663be69d68dc0a072ab1605257e82249ba007ebae8280b)
+sha256sums=(d0ee3f30587bf5715a8952c38a26e148f5efad2d4ed8d7d7f7547ad65241fdbc)
 
 build() {
 	cd "${srcdir}/cerberus-logging-${pkgver}"
