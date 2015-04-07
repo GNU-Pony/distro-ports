@@ -1,0 +1,39 @@
+#!/bin/sh
+
+applebloom=games
+bash_d=system
+cerberus=system
+cerberus_logging=system
+cerberus_securetty=system
+featherweight=network
+gates_of_tartaros=system
+got_diminished=system
+libpassphrase=lib
+pony_computer=system
+ponyguests=system
+pony_initialisation=system
+pytagomacs=lib
+rc_local_d=system
+splashtool=multimedia
+
+USERNAME=maandree
+STTY=$(stty -g)
+stty -echo
+echo "[$USERNAME] Enter passphrase for AUR: "
+PASSPHRASE="$(sed 1q)"
+stty $STTY
+
+cd "$(dirname "$0")"
+for PKGNAME in "$@"; do
+    (
+	CATEGORY=$(echo $PKGNAME | sed y/.-/__/)
+	CATEGORY=$(eval "echo \${${CATEGORY}}")
+	cd $PKGNAME
+	PKGVER="$(bash -c '. PKGBUILD; echo $pkgver')"
+	PKGREL="$(bash -c '. PKGBUILD; echo $pkgrel')"
+	PKGNAME="$(bash -c '. PKGBUILD; echo $pkgname')"
+	mkaurball
+	burp -u $USERNAME -p "$PASSPHRASE" -c $CATEGORY $PKGNAME-$PKGVER-$PKGREL.src.tar.gz
+    )
+done
+
